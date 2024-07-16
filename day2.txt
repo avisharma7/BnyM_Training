@@ -1,0 +1,54 @@
+Day-2
+
+New features added in java 8
+1)	Functional programming
+2)	Lambda expressions  required for android programming
+3)	Streams API  used in multithreading, helps to achieve concurency
+
+Interfaces in java
+1) all the methods in java are public and abstract by default
+2) in abstract class, methods with implementation can be written
+3) abstract class has abstract as well as concrete methods, but interfaces have only abstract methods
+
+List is a interface where stream api methods is there
+
+Interface can be used to implement multiple inheritance in  java
+
+static methods are allowed in java 8
+static methods can be called  using class or interface name
+
+STREAM API
+When you use stream api, you just have to focus on what to do, not how to do
+
+#Different Methods in stream API
+
+#Java Lambda helps to iterate, filter and extract data from collection.
+Lambda expression provides implementation of functional interface
+An interface which has only one abstract method is called functional interface.
+Java provides an anotation @FunctionalInterface,
+which is used to declare an interface as functional interface.
+Why use Lambda Expression?
+1) To provide the implementation of Functional interface.
+2) Less coding.
+
+-> Lambda expression only works with functional interface
+
+#Stream API
+1) stream are used to filter, collect, print, and convert from one data structure to other etc
+
+# Method references
+
+Java provides a new feature called method reference in Java 8. Method reference is used to refer method of functional interface.
+ It is compact and easy form of lambda expression.
+
+ Types of Method References
+
+ Reference to a static method.
+ Reference to an instance method.
+ Reference to a constructor.
+
+
+
+
+
+
