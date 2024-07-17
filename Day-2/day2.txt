@@ -1,0 +1,22 @@
+Day-2
+
+New features added in java 8
+1)	Functional programming
+2)	Lambda expressions  required for android programming
+3)	Streams API  used in multithreading, helps to achieve concurency
+
+Interfaces in java
+1) all the methods in java are public and abstract by default
+2) in abstract class, methods with implementation can be written
+3) abstract class has abstract as well as concrete methods, but interfaces have only abstract methods
+
+List is a interface where stream api methods is there
+
+Interface can be used to implement multiple inheritance in  java
+
+static methods are allowed in java 8
+static methods can be called  using class or interface name
+
+STREAM API
+When you use stream api, you just have to focus on what to do, not how to do
+
