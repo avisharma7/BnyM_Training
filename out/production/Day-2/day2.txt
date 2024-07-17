@@ -43,9 +43,70 @@ Java provides a new feature called method reference in Java 8. Method reference 
 
  Types of Method References
 
+
  Reference to a static method.
  Reference to an instance method.
  Reference to a constructor.
+
+ #LAMDA EXPRESSION:
+ 1)lambda expressions are a powerful feature introduced to facilitate functional programming within the language.
+ 2)Lambda expressions allow you to treat functionality as a method argument, or to create concise code blocks.
+
+ Syntax of lambda expression:
+ (parameters) -> {statements;}
+ -> seperates the parameters and body
+ parameter is similar to method parameters
+ {statements; } specifies actions of the lambda expression
+ we must use a return statement explicitly if it returns a value.
+
+ #Examples of lambda expressions
+
+ 1) Single parameter Lambda expression:
+ // Lambda expression to print a value
+ (a) -> System.out.println(a)
+
+2)Multiple parameters lambda expression:
+  // Lambda expression to perform addition
+  (a, b) -> a + b
+
+ 3) No parameter Lambda expression
+ // Lambda expression to generate a random number
+ () -> Math.random()
+
+4) Lambda expression with multiple statements:
+// Lambda expression to find the maximum of two numbers
+(a, b) -> {
+    if (a >= b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+Lambda expressions are often used in combination with functional interfaces,
+ which are interfaces with a single abstract method (SAM).
+ For example, java.util.function package provides many functional interfaces that can be used with lambda expressions,
+ such as Predicate, Consumer, Function, etc.
+
+#JAVA OPTIONAL CLASS
+Java introduced a new class Optional in jdk8.
+It is a public final class and used to deal with NullPointerException in Java application.
+We must import java.util package to use this class.
+It provides methods which are used to check the presence of value for particular variable.
+
+#Java method references:
+Java provides a new feature called method reference in Java 8.
+Method reference is used to refer method of functional interface.
+It is compact and easy form of lambda expression.
+Each time when you are using lambda expression to just referring a method,
+we can replace your lambda expression with method reference.
+
+#types of reference methods:
+1) reference to a static method
+2) reference to instance method
+3) reference to a constructor
+
+
+
 
 
 
