@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perficient Employee Registration Form</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://www.perficient.com/-/media/images/temp/temp-logos/perficient/perficient-logo-vertical.ashx?h=192&iar=0&w=275&hash=AA2D782B4D1C61AE58DAD03759C4C4BF"
+        alt="Perficient Logo"
+        height="auto"
+        width="auto"
+      />
+      <h1>Employee Registration Form</h1>
+      <script>
+        function showAlert() {
+          const dateOfJoining = document.getElementById("dateOfJoining").value;
+          const today = new Date().toISOString().split("T")[0];
+
+          if (dateOfJoining > today) {
+            alert("Date of Joining cannot be in the future.");
+            return false; // Prevent form submission
+          }
+
+          alert("Congratulations! Your registration is successful");
+          return true; // Allow form submission
+        }
+      </script>
+    </header>
+    <main>
+      <form id="registrationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required />
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required />
+
+        <label for="dateOfJoining">Date of Joining:</label>
+        <input type="date" id="dateOfJoining" name="dateOfJoining" required />
+
+        <button type="submit" onclick="showAlert()">Register</button>
+      </form>
+      <p>This is for <strong>assignment</strong> purpose only.</p>
+      <p>
+        Created by <strong><em>Aviral Sharma</em></strong>
+        <br />
+        Designation: Associate Technical Consultant
+      </p>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>

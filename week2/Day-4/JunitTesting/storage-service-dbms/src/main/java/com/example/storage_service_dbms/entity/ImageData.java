@@ -7,13 +7,13 @@ import lombok.NoArgsConstructor;
 import lombok.Data;
 
 @Entity
-@Table(name = "ImageData")
+@Table(name = "Imagedata") //in db table created as Imagedata if ImageData then Image_data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Data
 public class ImageData {
-    @Id
+    @Id     //pk is automatically generated in db with auto increment feature
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String type;

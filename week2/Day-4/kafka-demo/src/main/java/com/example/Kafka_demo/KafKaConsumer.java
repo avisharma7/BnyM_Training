@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+//Consumer consuming the msg
 @Service
 public class KafKaConsumer {
 
