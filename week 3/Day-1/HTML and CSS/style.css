@@ -1,0 +1,117 @@
+/* Reset default margins and paddings, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General font settings */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container for layout centering */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Top section styling */
+.top {
+  background-color: #ffeb3b;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+h2,
+h3 {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  color: #409ec1;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #bab1ba;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Styling for paragraphs */
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Specific paragraph classes */
+.ooty {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #666;
+  text-align: justify;
+}
+
+.Hillstations {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Sidebar styling */
+#sidebar {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+/* Layout sections */
+.bottom-left,
+.bottom-right {
+  padding: 20px;
+  color: #fff;
+}
+
+.bottom-left {
+  background-color: #f44336; /* Red */
+  width: 75%;
+  float: left;
+}
+
+.bottom-right {
+  background-color: #2196f3; /* Blue */
+  width: 25%;
+  float: left;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .bottom-left,
+  .bottom-right {
+    width: 100%;
+    float: none;
+  }
+}
