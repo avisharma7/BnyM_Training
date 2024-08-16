@@ -12,9 +12,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
-
-
 @Service
 public class BookServiceImpl implements BookService {
 

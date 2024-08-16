@@ -1,0 +1,86 @@
+Book-APIs
+
+
+
+1) Read all data
+method = get
+url: http://localhost:8080/api/books
+
+2) count of books
+method = get
+url: http://localhost:8080/api/books/count
+
+3) search book by Id
+method: get
+url: http://localhost:8080/api/books/3
+
+4) creating a book
+method: post
+url: http://localhost:8080/api/books
+body:
+{
+  "isbn": "1234567890",
+  "name": "Book Title",
+  "author": "Author Name",
+  "bookDetails": []
+}
+
+
+5) update a book
+method: put
+url: http://localhost:8080/api/books/3
+body:
+ {
+    "id": 3,
+    "isbn": "978-0-596-52068-7-90",
+    "name": "Design Patterns updateddd",
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"
+}
+
+6) delete a book
+method: delete
+url: http://localhost:8080/api/books/3
+
+
+BookDetailsApis
+1) get book details
+method: get
+url: http://localhost:8080/api/bookdetails/fetch
+
+2) Get Book Details Count
+method: get
+url: http://localhost:8080/api/bookdetails/count
+
+3) Get book details by id
+method: get
+url:http://localhost:8080/api/bookdetails/4
+
+4) Create new book details
+method: post
+url: http://localhost:8080/api/bookdetails
+body:
+{
+  "publisher": "Publisher Name",
+  "year": 2024,
+  "price": 29.99,
+  "book": {
+    "id": 4 // Ensure this ID exists in the Book entity
+  }
+}
+
+5) update existing book details
+method: put
+url: http://localhost:8080/api/bookdetails/8
+body:
+{
+  "publisher": "Updated Publisher",
+  "year": 2025,
+  "price": 35.99,
+  "book": {
+    "id": 4 // Ensure this ID exists in the Book entity
+  }
+}
+
+6) delete existing book details
+method: delete
+url: http://localhost:8080/api/bookdetails/8

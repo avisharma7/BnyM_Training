@@ -1,0 +1,75 @@
+2024-08-14 13:19:04 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-08-14 13:19:04 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-08-14 13:19:18 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-14 13:19:18 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2e587292
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5852605c
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-14 13:19:18 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/book/102", parameters={}
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.greenlearner.LibraryApplication.controller.BookController#getBook(long)
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2024-08-14 13:19:18 [http-nio-8081-exec-1] INFO  c.g.L.api.BookServiceImpl - fetching book from db
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1427068427<open>)] for JPA transaction
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.jdbc.datasource.DataSourceUtils - Setting JDBC Connection [HikariProxyConnection@498452977 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf984d9] read-only
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.h.e.t.internal.TransactionImpl - begin
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2c281aa8]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results - Initializer list:
+	  com.greenlearner.LibraryApplication.dto.Book -> EntityResultInitializer(com.greenlearner.LibraryApplication.dto.Book)@779938872 (SingleTableEntityPersister(com.greenlearner.LibraryApplication.dto.Book))
+
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.author,b1_0.category,b1_0.edition,b1_0.name,b1_0.publisher from book b1_0 where b1_0.id=?
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.greenlearner.LibraryApplication.dto.Book): 102
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.greenlearner.LibraryApplication.dto.Book#102] : 92311159
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [DU ABC]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [Computer Science]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [2nd]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [dbms Reactive Programming]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [India]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.greenlearner.LibraryApplication.dto.Book#102
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@70149655
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [SessionImpl(1427068427<open>)]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.h.e.t.internal.TransactionImpl - committing
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.jdbc.datasource.DataSourceUtils - Resetting read-only flag of JDBC Connection [HikariProxyConnection@498452977 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf984d9]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.orm.jpa.JpaTransactionManager - Not closing pre-bound JPA EntityManager after transaction
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.greenlearner.LibraryApplication.dto.Book@5808e77]
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2024-08-14 13:19:18 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/book", parameters={}
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.greenlearner.LibraryApplication.controller.BookController#addBook(Book)
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.greenlearner.LibraryApplication.dto.Book@4319d905]
+2024-08-14 13:19:29 [http-nio-8081-exec-3] INFO  c.g.L.api.BookServiceImpl - adding book with id - 0
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(947945135<open>)] for JPA transaction
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.h.e.t.internal.TransactionImpl - begin
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@65f7fd85]
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG o.h.j.i.PersistenceUnitUtilImpl - jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select next_val as id_val from book_seq for update
+2024-08-14 13:19:29 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - update book_seq set next_val= ? where next_val=?
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 202, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [SessionImpl(947945135<open>)]
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.e.t.internal.TransactionImpl - committing
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.h.internal.util.EntityPrinter - com.greenlearner.LibraryApplication.dto.Book{author=DU ABC, name=CAO Reactive Programming, edition=2nd, publisher=India, id=202, category=Computer Science}
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - insert into book (author,category,edition,name,publisher,id) values (?,?,?,?,?,?)
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.orm.jpa.JpaTransactionManager - Not closing pre-bound JPA EntityManager after transaction
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.greenlearner.LibraryApplication.dto.Book@4319d905]
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2024-08-14 13:19:30 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-08-14 13:19:34 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-08-14 13:19:34 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
