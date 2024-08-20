@@ -47,12 +47,29 @@ public class CourseRepository {
 
     public void playWithEntityManager(){
         //persist: to create new resources
-        Course course = new Course("learn web-dev by Aviral");
-        em.persist(course);
-        course.setName(" learn web dev by AVIRAL  updated");
+        Course course1 = new Course("web services in 100 steps");
+        em.persist(course1);
+        Course course2 = new Course("Angular js in 100 steps");
+        em.persist(course2);
+
+        em.flush();
+
+        course1.setName("web services in 100 steps -  updated");
+        course2.setName("Angular js in 100 steps -  updated");
+
+        em.refresh(course1); //content of course 1 is refereshed to get the prev. content
+
 
 
     }
 
 
 }
+/*
+
+By default em tracks everythings
+if you dont want something to be tracked. do detach()
+
+em.flush is for persisting the data in db
+em.clear() is for clearing everything just like em.detach
+ */
